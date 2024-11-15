@@ -1,0 +1,80 @@
+body{
+  background-image: url("img/flowers-bg-img.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* 
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  } */
+  
+  
+  .outer-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  h1{
+    font-size: 3.5rem;
+  }
+  
+  .header-inner-container{
+    font-size: 1rem;
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    color: lightgoldenrodyellow;
+    margin: 1rem 0 1rem 0;
+    max-width: 1536px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+    width: 100%;
+  }
+  
+  .images-inner-container{
+    max-width: 1536px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+    margin-bottom: 5rem
+  }
+
+.row-left{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 5rem;
+  width: 1536px;
+}
+
+.row-right{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-bottom: 5rem;
+  width: 1536px;
+}
+
+.image{
+  border-radius: 8px;
+  box-shadow: cornflowerblue;
+  max-width: 700px;
+  margin: 0.5rem 0.5rem;
+  filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+}
