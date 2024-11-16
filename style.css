@@ -1,80 +1,120 @@
-body{
-  background-image: url("img/flowers-bg-img.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-/* 
-main{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  } */
-  
-  
-  .outer-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-  }
-
-  h1{
-    font-size: 3.5rem;
-  }
-  
-  .header-inner-container{
-    font-size: 1rem;
-    font-family: "Space Mono", monospace;
-    font-weight: 400;
-    font-style: normal;
-    color: lightgoldenrodyellow;
-    margin: 1rem 0 1rem 0;
-    max-width: 1536px;
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    text-align: start;
-    width: 100%;
-  }
-  
-  .images-inner-container{
-    max-width: 1536px;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
-    text-align: start;
-    margin-bottom: 5rem
-  }
-
-.row-left{
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  margin-bottom: 5rem;
-  width: 1536px;
+body,
+html {
+  margin: 0;
+	padding: 0;
+	width: 100%;
+	overflow-x: hidden;
 }
 
-.row-right{
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  margin-bottom: 5rem;
-  width: 1536px;
+body {
+  background-image: url("img/flowers-bg-img-2.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	/* Avoid scrollbar overflow */
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 }
 
-.image{
-  border-radius: 8px;
-  box-shadow: cornflowerblue;
-  max-width: 700px;
-  margin: 0.5rem 0.5rem;
-  filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+h1 {
+  font-size: 3.5rem;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 100%;
+	margin: 8px;
+}
+
+.main-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.text-container {
+	font-size: 1rem;
+	font-family: "Space Mono", monospace;
+	font-weight: 400;
+	font-style: normal;
+	color: lightgoldenrodyellow;
+	margin: 1rem 0 1rem 0;
+	display: flex;
+	justify-content: start;
+	align-items: start;
+	text-align: start;
+	word-wrap: break-word;
+	width: 100%;
+}
+
+.image-container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-bottom: 5rem;
+	/* IMPORTANT - Ensures width accounts for padding/margin, remains same total width as .text-container */
+	box-sizing: border-box;
+}
+
+.row-left {
+	display: flex;
+	width: 100%;
+	margin-bottom: 5rem;
+	justify-content: flex-start;
+}
+
+.row-right {
+	display: flex;
+	width: 100%;
+	margin-bottom: 5rem;
+	justify-content: flex-end;
+}
+
+img {
+	border-radius: 8px;
+	max-width: 700px;
+	filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+	width: 100%;
+	/* maintain image aspect ratio */
+	height: auto;
+}
+
+/* mobile/tablet */
+@media screen and (max-width: 1536px) {
+
+	.image-container {
+		padding: 0.5rem;
+
+	}
+
+	.main-container {
+		width: 100%;
+		max-width: 90%;
+	}
+
+
+}
+
+/* desktop */
+@media screen and (min-width: 1536px) {
+
+	.main-container {
+		width: 90%;
+		max-width: 1536px;
+	}
+
+	img {
+		margin: 0.5rem;
+	}
+
+
 }
