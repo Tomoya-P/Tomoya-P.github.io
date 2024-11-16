@@ -41,6 +41,18 @@ main {
 	align-items: center;
 }
 
+.header-row{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header-row img{
+	width: 100%;
+	height: auto;
+	max-width: 70px;
+}
+
 .text-container {
 	font-size: 1rem;
 	font-family: "Space Mono", monospace;
@@ -48,9 +60,6 @@ main {
 	font-style: normal;
 	color: lightgoldenrodyellow;
 	margin: 1rem 0 1rem 0;
-	display: flex;
-	justify-content: start;
-	align-items: start;
 	text-align: start;
 	word-wrap: break-word;
 	width: 100%;
@@ -79,7 +88,7 @@ main {
 	justify-content: flex-end;
 }
 
-img {
+.image-container img {
 	border-radius: 8px;
 	max-width: 700px;
 	filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
